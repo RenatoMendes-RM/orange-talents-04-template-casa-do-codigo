@@ -1,5 +1,6 @@
 package br.com.zupacademy.renatomendes.cdc.autor;
 
+import compartilhado.CpfOuCnpj;
 import compartilhado.VerificaExistenciaNoBanco;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.util.Assert;
@@ -9,10 +10,14 @@ import javax.validation.constraints.NotBlank;
 
 public class AutorRequest {
     private @NotBlank @Length(min = 3) String nome;
-//    @VerificaExistenciaNoBanco(tabela = Autor.class, campo = "email")
-    private @NotBlank @Email String email;
+
+    private  @NotBlank @Email String email;
+
+    //@VerificaExistenciaNoBanco(tabela = Autor.class, campo = "email")
+
     private @NotBlank @Length(min = 10, max = 400) String descricao;
 
+    //private @CpfOuCnpj String cpfOuCnpj;
 
     public AutorRequest(@NotBlank @Length(min = 3) String nome
             , @NotBlank @Email String email

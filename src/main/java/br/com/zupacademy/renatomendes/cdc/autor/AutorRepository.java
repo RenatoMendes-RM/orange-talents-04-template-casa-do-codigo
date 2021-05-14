@@ -10,6 +10,7 @@ import java.util.Optional;
 public interface AutorRepository extends CrudRepository<Autor, Long> {
 
     Optional<Autor> findByEmail(String email);
+
     boolean existsByEmail(String email);
 
 

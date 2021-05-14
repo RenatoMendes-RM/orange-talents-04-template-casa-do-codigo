@@ -1,5 +1,6 @@
 package br.com.zupacademy.renatomendes.cdc.autor;
 
+import compartilhado.VerificaExistenciaNoBanco;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.util.Assert;
@@ -27,6 +28,7 @@ public class Autor {
     @CreationTimestamp
     private LocalDateTime criadoEm = LocalDateTime.now(ZoneOffset.UTC);
 
+    /*somente o hibernate deve usar este construtor*/
     @Deprecated
     public Autor(){};
 
