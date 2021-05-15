@@ -72,7 +72,6 @@ public class AutorController {
     }
 */
 
-
     @GetMapping("/autores/{id}/email")
     public ResponseEntity<?> buscaEmailAutor(@PathVariable Long id) {
         Optional<Autor> byId = autorRepository.findById(id);

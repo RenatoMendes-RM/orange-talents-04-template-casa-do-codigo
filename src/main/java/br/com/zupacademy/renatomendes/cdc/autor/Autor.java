@@ -1,6 +1,6 @@
 package br.com.zupacademy.renatomendes.cdc.autor;
 
-import compartilhado.VerificaExistenciaNoBanco;
+//import compartilhado.VerificaExistenciaNoBanco;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.util.Assert;
